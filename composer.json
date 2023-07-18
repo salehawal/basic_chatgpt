@@ -1,8 +1,0 @@
-{
-    "require": {
-        "tectalic/openai": "^1.4",
-        "guzzlehttp/guzzle": "^7.5",
-        "orhanerday/open-ai": "^4.7",
-        "symfony/http-client": "^6.2"
-    }
-}
