@@ -1,4 +1,5 @@
 # basic_chatgpt
-a basic chatgpt demo using plain php
+a native php/chatgpt
 
+# how to use it
 just rename the .env.example to .env and start using the code ...
