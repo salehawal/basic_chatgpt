@@ -17,12 +17,16 @@
 <p>
 <div style="margin: auto; padding: 10px 20px; background-color: #ccc; width:90%;">
     <h2>Result:</h2>
+    <div id="loading"><img src="lib/SVG-Loaders-master/svg-loaders/puff.svg" /></div>
     <div id="result"></div>
 </div>
 </p>
 <script type="text/javascript">
+$("#loading").hide();
 $("#baction").click(function(e) {
     e.preventDefault();
+    $("#result").text("");
+    $("#loading").show();
     $.ajax({
         type: "POST",
         url: "ajax.php",
@@ -30,10 +34,11 @@ $("#baction").click(function(e) {
             query: $("#query").val()
         },
         success: function(result) {
+            $("#loading").hide();
             $("#result").text(result);
-            console.log(result);
         },
         error: function(result) {
+            $("#loading").hide();
             $("#result").text(result);
         }
     });
